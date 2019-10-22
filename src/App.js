@@ -13,9 +13,10 @@ function App() {
         <Navbar />
         <br/>
         <Route path="/" exact component={ArticlesList} />
-        <Route path="/new" exact component={NewArticle} />
-        <Route path="/:id/edit" exact component={EditArticle} />
+        <Route path="/new" component={NewArticle} />
+        <Route path="/:id/edit" component={EditArticle} />
       </div>
+    </Router>
   );
 }
 
