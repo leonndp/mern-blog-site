@@ -56,38 +56,38 @@ export default class NewArticle extends React.Component {
 		return (
 			<div>
 				<h1>New Post</h1>
-				<form onSubmit={this.onSubmit}>
-					<div>
-						<label>Title: </label>
-						<input 
-							type='text' 
-							maxLength="50"
-							value={this.state.title} 
-							onChange={this.onChangeTitle}
-							required
-							/>
-					</div>
-					<div>
-						<label>Image: </label>
-						<input 
-							type='text' 
-							value={this.state.image}
-							onChange={this.onChangeImage}
-							required
-							/>
-					</div>
-					<div>
-						<label>Content: </label>
-						<textarea 
-							value={this.state.content}
-							onChange={this.onChangeContent}
-							required
-							/>
-					</div>
-					<div>
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
+					<form onSubmit={this.onSubmit}>
+						<div>
+							<label>Title: </label>
+							<input 
+								type='text' 
+								maxLength="50"
+								value={this.state.title} 
+								onChange={this.onChangeTitle}
+								required
+								/>
+						</div>
+						<div>
+							<label>Image: </label>
+							<input 
+								type='text' 
+								value={this.state.image}
+								onChange={this.onChangeImage}
+								required
+								/>
+						</div>
+						<div>
+							<label>Content: </label>
+							<textarea 
+								value={this.state.content}
+								onChange={this.onChangeContent}
+								required
+								/>
+						</div>
+						<div>
+							<input type="submit" value="Submit" />
+						</div>
+					</form>
 			</div>
 		)
 	}

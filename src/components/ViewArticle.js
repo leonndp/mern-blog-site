@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 export default class ViewArticle extends React.Component {
 	constructor(props){
@@ -44,7 +45,7 @@ export default class ViewArticle extends React.Component {
 		return (
 			<div>
 				<h1>{this.state.title}</h1>
-				<p>{this.state.createdAt}</p>
+				<p>{moment(this.state.createdAt.substring(0,10)).format("MMM DD YYYY")}</p>
 				<img src={this.state.image} />
 				<p>{this.state.content}</p>
 				<Link to={"/edit/"+this.props.match.params.id}>Update Article</Link>
