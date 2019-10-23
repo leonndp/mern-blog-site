@@ -21,7 +21,7 @@ export default class ViewArticle extends React.Component {
 			.then(res => {
 				this.setState({
 					title: res.data.title,
-					date: new Date(res.data.date).toString(),
+					date: new Date(res.data.date),
 					image: res.data.image,
 					content: res.data.content
 				})
@@ -44,7 +44,7 @@ export default class ViewArticle extends React.Component {
 		return (
 			<div>
 				<h1>{this.state.title}</h1>
-				<p>{this.state.date}</p>
+				<p>{this.state.date.toString()}</p>
 				<img src={this.state.image} />
 				<p>{this.state.content}</p>
 				<Link to={this.props.match.params.id+"/edit"}>Update Article</Link>
