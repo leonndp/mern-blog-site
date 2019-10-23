@@ -63,6 +63,7 @@ export default class NewArticle extends React.Component {
 						<label>Title: </label>
 						<input 
 							type='text' 
+							maxlength="50"
 							value={this.state.title} 
 							onChange={this.onChangeTitle}
 							required
@@ -74,19 +75,19 @@ export default class NewArticle extends React.Component {
 							type='text' 
 							value={this.state.image}
 							onChange={this.onChangeImage}
+							required
 							/>
 					</div>
 					<div>
 						<label>Content: </label>
-						<input 
-							type='textarea' 
+						<textarea 
 							value={this.state.content}
 							onChange={this.onChangeContent}
 							required
 							/>
 					</div>
 					<div>
-						<input type="submit" value="Create Post" />
+						<input type="submit" value="Submit" />
 					</div>
 				</form>
 			</div>

@@ -67,7 +67,7 @@ export default class EditArticle extends React.Component {
 		axios.put(`http://localhost:5000/articles/${this.props.match.params.id}`, article)
 			.then(res => console.log(res.data));
 
-		window.location = `/${this.props.match.params.id}`;
+		window.location = `/view/${this.props.match.params.id}`;
 	}
 
 	render() {
@@ -79,6 +79,7 @@ export default class EditArticle extends React.Component {
 						<label>Title: </label>
 						<input 
 							type='text' 
+							maxlength="50"
 							value={this.state.title} 
 							onChange={this.onChangeTitle}
 							required
@@ -90,19 +91,19 @@ export default class EditArticle extends React.Component {
 							type='text' 
 							value={this.state.image}
 							onChange={this.onChangeImage}
+							required
 							/>
 					</div>
 					<div>
 						<label>Content: </label>
-						<input 
-							type='textarea' 
+						<textarea 
 							value={this.state.content}
 							onChange={this.onChangeContent}
 							required
 							/>
 					</div>
 					<div>
-						<input type="submit" value="Edit Post" />
+						<input type="submit" value="Submit" />
 					</div>
 				</form>
 			</div>

@@ -47,7 +47,7 @@ export default class ViewArticle extends React.Component {
 				<p>{this.state.date.toString()}</p>
 				<img src={this.state.image} />
 				<p>{this.state.content}</p>
-				<Link to={this.props.match.params.id+"/edit"}>Update Article</Link>
+				<Link to={"/edit/"+this.props.match.params.id}>Update Article</Link>
 				<a href="#" onClick={this.deleteArticle}>Delete Article</a>
 			</div>
 		)

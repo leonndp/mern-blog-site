@@ -7,7 +7,7 @@ const Article = props => (
 		<h3>{props.article.title}</h3>
 		<p>{props.article.date.toString()}</p>
 		<p>{props.article.content.substring(0,100)}...</p>
-		<Link to={'/'+props.article._id}>Read More</Link>
+		<Link to={'/view/'+props.article._id}>Read More</Link>
 	</div>
 )
 
