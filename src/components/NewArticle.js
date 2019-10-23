@@ -12,7 +12,6 @@ export default class NewArticle extends React.Component {
 
 		this.state = {
 			title:'',
-			date:new Date(),
 			image:'',
 			content:''
 		}
@@ -41,7 +40,6 @@ export default class NewArticle extends React.Component {
 
 		const article = {
 			title: this.state.title,
-			date: this.state.date,
 			image: this.state.image,
 			content: this.state.content
 		}
@@ -63,7 +61,7 @@ export default class NewArticle extends React.Component {
 						<label>Title: </label>
 						<input 
 							type='text' 
-							maxlength="50"
+							maxLength="50"
 							value={this.state.title} 
 							onChange={this.onChangeTitle}
 							required

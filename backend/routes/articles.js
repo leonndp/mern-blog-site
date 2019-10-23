@@ -11,13 +11,11 @@ router.route('/').get((req, res) => {
 // Create
 router.route('/add').post((req, res) => {
 	const title = req.body.title;
-	const date = Date.parse(req.body.date);
 	const image = req.body.image;
 	const content = req.body.content;
 
 	const newArticle = new Article({
 		title,
-		date,
 		image,
 		content
 	})
@@ -39,7 +37,6 @@ router.route('/:id').put((req, res) => {
 	Article.findById(req.params.id)
 		.then(article => {
 			article.title = req.body.title;
-			article.date = Date.parse(req.body.date);
 			article.image = req.body.image;
 			article.content = req.body.content;
 

@@ -12,7 +12,6 @@ export default class EditArticle extends React.Component {
 
 		this.state = {
 			title:'',
-			date:new Date(),
 			image:'',
 			content:''
 		}
@@ -24,7 +23,6 @@ export default class EditArticle extends React.Component {
 			.then(res => {
 				this.setState({
 					title: res.data.title,
-					date: new Date(res.data.date),
 					image: res.data.image,
 					content: res.data.content
 				})
@@ -57,7 +55,6 @@ export default class EditArticle extends React.Component {
 
 		const article = {
 			title: this.state.title,
-			date: this.state.date,
 			image: this.state.image,
 			content: this.state.content
 		}
@@ -79,7 +76,7 @@ export default class EditArticle extends React.Component {
 						<label>Title: </label>
 						<input 
 							type='text' 
-							maxlength="50"
+							maxLength="50"
 							value={this.state.title} 
 							onChange={this.onChangeTitle}
 							required
