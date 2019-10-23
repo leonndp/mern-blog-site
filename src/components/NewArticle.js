@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 export default class NewArticle extends React.Component {
 	constructor(props){
@@ -46,6 +47,9 @@ export default class NewArticle extends React.Component {
 		}
 
 		console.log(article);
+
+		axios.post('http://localhost:5000/articles/add', article)
+			.then(res => console.log(res.data));
 
 		window.location = '/';
 	}
