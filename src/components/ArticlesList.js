@@ -1,9 +1,38 @@
 import React from 'react';
+import axios from 'axios';
+import Article from './Article';
 
 export default class ArticlesList extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {articles: []}
+	}
+
+	componentDidMount() {
+		axios.get('http://localhost:5000/articles/')
+			.then(res => {
+				this.setState({ articles: res.data })
+			})
+			.catch(error => {
+				console.log(error);
+			})
+	}
+
+	articleList() {
+		return this.state.articles.map(currentArticle => {
+			return <Article article={currentArticle} key={currentArticle._id} />;
+		})
+	}
+
 	render() {
 		return (
-			<div>This is the ArticlesList component!</div>
+			<div>
+				<h1>Blog Site</h1>
+				<div>
+					{ this.articleList() }
+				</div>
+			</div>
 		)
 	}
 }
