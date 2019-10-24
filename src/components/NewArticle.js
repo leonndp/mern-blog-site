@@ -54,12 +54,14 @@ export default class NewArticle extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1>New Post</h1>
-					<form onSubmit={this.onSubmit}>
-						<div>
-							<label>Title: </label>
+			<div className="wrapper">
+				<div className="body-border">
+					<h1 className="title">New Post</h1>
+					<form className="article-form" onSubmit={this.onSubmit}>
+						<div className="article-form__group">
+							<label className="article-form__label">Title: </label>
 							<input 
+								className="article-form__input"
 								type='text' 
 								maxLength="50"
 								value={this.state.title} 
@@ -67,27 +69,30 @@ export default class NewArticle extends React.Component {
 								required
 								/>
 						</div>
-						<div>
-							<label>Image: </label>
-							<input 
+						<div className="article-form__group">
+							<label className="article-form__label">Image: </label>
+							<input
+								className="article-form__input" 
 								type='text' 
 								value={this.state.image}
 								onChange={this.onChangeImage}
 								required
 								/>
 						</div>
-						<div>
-							<label>Content: </label>
-							<textarea 
+						<div className="article-form__group">
+							<label className="article-form__label">Content: </label>
+							<textarea
+								className="article-form__input article-form__input--large" 
 								value={this.state.content}
 								onChange={this.onChangeContent}
 								required
 								/>
 						</div>
 						<div>
-							<input type="submit" value="Submit" />
+							<input className="btn btn--purple" type="submit" value="Submit" />
 						</div>
 					</form>
+				</div>
 			</div>
 		)
 	}

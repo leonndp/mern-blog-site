@@ -43,13 +43,17 @@ export default class ViewArticle extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1>{this.state.title}</h1>
-				<p>{moment(this.state.createdAt.substring(0,10)).format("MMM DD YYYY")}</p>
-				<img src={this.state.image} />
-				<p>{this.state.content}</p>
-				<Link to={"/edit/"+this.props.match.params.id}>Update Article</Link>
-				<a href="#" onClick={this.deleteArticle}>Delete Article</a>
+			<div className="wrapper">
+				<h1 className="article-title">{this.state.title}</h1>
+				<div className="body-border">
+					<img className="article-body__image" src={this.state.image} />
+					<p className="article-body__date">{moment(this.state.createdAt.substring(0,10)).format("MMM DD YYYY")}</p>
+					<p className="article-body__content">{this.state.content}</p>
+					<div className="article-body__buttons">
+						<Link className="btn btn--orange" to={"/edit/"+this.props.match.params.id}>Update Article</Link>
+						<a className="btn btn--red" href="#" onClick={this.deleteArticle}>Delete Article</a>
+					</div>
+				</div>
 			</div>
 		)
 	}

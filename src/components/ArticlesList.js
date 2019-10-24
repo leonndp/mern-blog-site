@@ -27,9 +27,9 @@ export default class ArticlesList extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="wrapper">
 				<h1>Blog Site</h1>
-				<div>
+				<div className="body-border">
 					{ this.articleList() }
 				</div>
 			</div>

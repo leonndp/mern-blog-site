@@ -1,0 +1,24 @@
+.article-form {
+	display:grid;
+	grid-gap: 20px;
+}
+
+.article-form__group {
+	display: grid;
+	grid-gap: 5px;
+}
+
+.article-form__label {
+	font-weight:700;
+}
+
+.article-form__input {
+	border:1px solid rgba(0,0,0,0.2);
+	border-radius:5px;
+	height:2rem;
+}
+
+.article-form__input--large {
+	height:10rem;
+	resize:none;
+}

@@ -1,0 +1,9 @@
+.article-link {
+	margin-bottom:10px;
+
+	display:grid;
+}
+
+.article-link__thumbnail {
+	width:200px;
+}
