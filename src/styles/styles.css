@@ -3,6 +3,7 @@
 @import url("./_article-link.css");
 @import url("./_body-border.css");
 @import url("./_article-form.css");
+@import url("./_navbar.css");
 
 body {
   margin: 0;
