@@ -69,40 +69,45 @@ export default class EditArticle extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h1>Edit Post</h1>
-				<form onSubmit={this.onSubmit}>
-					<div>
-						<label>Title: </label>
-						<input 
-							type='text' 
-							maxLength="50"
-							value={this.state.title} 
-							onChange={this.onChangeTitle}
-							required
-							/>
-					</div>
-					<div>
-						<label>Image: </label>
-						<input 
-							type='text' 
-							value={this.state.image}
-							onChange={this.onChangeImage}
-							required
-							/>
-					</div>
-					<div>
-						<label>Content: </label>
-						<textarea 
-							value={this.state.content}
-							onChange={this.onChangeContent}
-							required
-							/>
-					</div>
-					<div>
-						<input type="submit" value="Submit" />
-					</div>
-				</form>
+			<div className="wrapper">
+				<div className="body-border">
+					<h1 className="title">Edit Post</h1>
+					<form className="article-form" onSubmit={this.onSubmit}>
+						<div className="article-form__group">
+							<label className="article-form__label">Title: </label>
+							<input 
+								className="article-form__input"
+								type='text' 
+								maxLength="50"
+								value={this.state.title} 
+								onChange={this.onChangeTitle}
+								required
+								/>
+						</div>
+						<div className="article-form__group">
+							<label className="article-form__label">Image: </label>
+							<input
+								className="article-form__input" 
+								type='text' 
+								value={this.state.image}
+								onChange={this.onChangeImage}
+								required
+								/>
+						</div>
+						<div className="article-form__group">
+							<label className="article-form__label">Content: </label>
+							<textarea
+								className="article-form__input article-form__input--large" 
+								value={this.state.content}
+								onChange={this.onChangeContent}
+								required
+								/>
+						</div>
+						<div>
+							<input className="btn btn--purple" type="submit" value="Submit" />
+						</div>
+					</form>
+				</div>
 			</div>
 		)
 	}
