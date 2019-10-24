@@ -1,9 +1,34 @@
 .article-link {
-	margin-bottom:10px;
+	margin-bottom:50px;
 
-	display:grid;
+	display:flex;
+	flex-direction:column;
+	align-items: flex-start;
 }
 
 .article-link__thumbnail {
-	width:200px;
+	width:100%;
+	margin-right: 20px;
+}
+
+.article-link__title{
+	margin-top:0;
+}
+
+@media(min-width:500px){
+	.article-link {
+		margin-bottom:50px;
+
+		display:flex;
+		align-items: flex-start;
+	}
+
+	.article-link__thumbnail {
+		width:200px;
+		margin-right: 20px;
+	}
+
+	.article-link__title{
+		margin-top:0;
+	}
 }
