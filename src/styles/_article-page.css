@@ -13,4 +13,5 @@
 .article-body__content {
 	white-space: pre-line;
 	white-space: pre-wrap;
+	word-wrap: break-word;
 }
