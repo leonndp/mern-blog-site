@@ -12,7 +12,12 @@ export default class ArticlesList extends React.Component {
 	componentDidMount() {
 		axios.get('http://localhost:5000/articles/')
 			.then(res => {
-				this.setState({ articles: res.data })
+				this.setState({ 
+					articles: res.data.sort((a,b) => {
+						return a.createdAt > b.createdAt ? -1 : a.createdAt < b.createdAt ? 1 : 0;
+					})
+				})
+				console.log(res.data);
 			})
 			.catch(error => {
 				console.log(error);

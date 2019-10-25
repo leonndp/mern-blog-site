@@ -26,8 +26,6 @@ export default class ViewArticle extends React.Component {
 					image: res.data.image,
 					content: res.data.content
 				})
-
-				console.log(res);
 			})
 			.catch(err => {
 				console.log(err);
