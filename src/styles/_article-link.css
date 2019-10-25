@@ -8,14 +8,18 @@
 
 .article-link__thumbnail {
 	width:100%;
+	max-height:300px;
+	object-fit:cover;
+
 	margin-right: 20px;
+	border-radius:5px;
 }
 
 .article-link__title{
 	margin-top:0;
 }
 
-@media(min-width:500px){
+@media(min-width:720px){
 	.article-link {
 		margin-bottom:50px;
 
@@ -25,7 +29,9 @@
 	}
 
 	.article-link__thumbnail {
-		width:200px;
+		object-fit:cover;
+		max-width:200px;
+		height:150px;
 		margin-right: 20px;
 	}
 

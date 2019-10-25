@@ -4,6 +4,7 @@
 @import url("./_body-border.css");
 @import url("./_article-form.css");
 @import url("./_navbar.css");
+@import url("./_not-found.css");
 
 body {
   margin: 0;
