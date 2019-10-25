@@ -19,7 +19,7 @@ export default class EditArticle extends React.Component {
 
 	componentDidMount(){
 		console.log(this.props.match.params);
-		axios.get(`http://localhost:5000/articles/${this.props.match.params.id}`)
+		axios.get(`https://${window.location.hostname}/articles/${this.props.match.params.id}`)
 			.then(res => {
 				this.setState({
 					title: res.data.title,
@@ -61,7 +61,7 @@ export default class EditArticle extends React.Component {
 
 		console.log(article);
 
-		axios.put(`http://localhost:5000/articles/${this.props.match.params.id}`, article)
+		axios.put(`https://${window.location.hostname}/articles/${this.props.match.params.id}`, article)
 			.then(res => console.log(res.data));
 
 		window.location = `/view/${this.props.match.params.id}`;

@@ -18,7 +18,7 @@ export default class ViewArticle extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get(`http://localhost:5000/articles/${this.props.match.params.id}`)
+		axios.get(`https://${window.location.hostname}/articles/${this.props.match.params.id}`)
 			.then(res => {
 				this.setState({
 					title: res.data.title,
@@ -33,7 +33,7 @@ export default class ViewArticle extends React.Component {
 	}
 
 	deleteArticle(e) {
-		axios.delete(`http://localhost:5000/articles/${this.props.match.params.id}`)
+		axios.delete(`https://${window.location.hostname}/articles/${this.props.match.params.id}`)
 			.then(res => console.log(res.data));
 
 		window.location = '/';

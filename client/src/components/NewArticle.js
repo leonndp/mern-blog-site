@@ -46,7 +46,7 @@ export default class NewArticle extends React.Component {
 
 		console.log(article);
 
-		axios.post('http://localhost:5000/articles/add', article)
+		axios.post(`https://${window.location.hostname}/articles/add`, article)
 			.then(res => console.log(res.data));
 
 		window.location = '/';
