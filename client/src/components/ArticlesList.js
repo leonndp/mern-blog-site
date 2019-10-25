@@ -10,7 +10,7 @@ export default class ArticlesList extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get(`${location.hostname}:5000/articles/`)
+		axios.get(`${window.location.hostname}:5000/articles/`)
 			.then(res => {
 				this.setState({ 
 					articles: res.data.sort((a,b) => {
