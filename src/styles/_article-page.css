@@ -8,3 +8,8 @@
 	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 	grid-gap:10px;
 }
+
+.article-body__content {
+	white-space: pre-line;
+	white-space: pre-wrap;
+}
